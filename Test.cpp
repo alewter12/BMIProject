@@ -39,4 +39,19 @@ TEST_CLASS(Test) {
 		double correct = 26;
 		Assert::AreEqual(correct, ans);
 	}
+	
+	TEST_METHOD(sorting) {
+		Logger::WriteMessage("In sortResults\n");
+		sortResults(18.5); //on
+		sortResults(16); // outside
+		sortResults(20);//internal
+		sortResults(24.9); //on
+		sortResults(24.98);
+		sortResults(25); //on
+		sortResults(26); //in
+		sortResults(29.9);//on
+		sortResults(29.98); //external
+		sortResults(30);//on
+		sortResults(35); //internal
+	}
 };
